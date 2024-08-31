@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Contract 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #00ffff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .neon-button {
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.5s;
+            margin: 5px;
+        }
+
+        .neon-button:hover {
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff, 0 0 30px #00ffff;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .input-field {
+            background-color: #1a1a1a;
+            color: #00ffff;
+            border: 1px solid #00ffff;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-4xl mb-8">Contract Interaction - 1</h1>
+    <button id="connectButton" class="neon-button">Connect with Metamask</button>
+    <div id="contractFunctions" class="hidden">
+        <div class="flex flex-col items-center mt-4">
+            <input id="userAddress" type="text" class="input-field" placeholder="Enter user address">
+            <input id="userName" type="text" class="input-field" placeholder="Enter user name">
+            <button id="registerButton" class="neon-button">Register User</button>
+        </div>
+        <div class="flex flex-col items-center mt-4">
+            <input id="checkUserAddress" type="text" class="input-field" placeholder="Check if user is registered">
+            <button id="checkUserButton" class="neon-button">Check User</button>
+        </div>
+        <div class="flex flex-col items-center mt-4">
+            <button id="getAdminButton" class="neon-button">Get Admin Address</button>
+        </div>
+        <div class="flex flex-col items-center mt-4">
+            <input id="deleteUserAddress" type="text" class="input-field" placeholder="Enter address to delete">
+            <button id="deleteUserButton" class="neon-button">Delete User</button>
+        </div>
+        <div class="flex flex-col items-center mt-4">
+            <input id="getUserNameAddress" type="text" class="input-field" placeholder="Enter address to get name">
+            <button id="getUserNameButton" class="neon-button">Get User Name</button>
+        </div>
+    </div>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
